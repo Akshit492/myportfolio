@@ -63,7 +63,7 @@ export default function Profile() {
               >{""}
               Contact Me{" "}
             </button>
-            <a href='SE LAB 2.docx' download='Akshit SE LAB 2.docx'>
+             <a href="https://drive.google.com/file/d/1LjbUyCmgWJpeqj3UViCrg3_kUUzkrsRe/view?usp=sharing" target='_blank' >
               <button className='btn highlighted-btn'>Get Resume</button>
             </a>
           </div>
