@@ -1,6 +1,6 @@
 [build]
   command = "npm install --prefix client && npm run build --prefix client"  # or your build command
-  publish = "build"          # or your build output directory
+  publish = "/opt/build/repo/client/build"  # or your build output directory
 
 [context.production.environment]
   CI = "false"
