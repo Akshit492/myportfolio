@@ -1,6 +1,14 @@
 [build]
-  command = "npm install --prefix client && npm run build --prefix client"  # or your build command
+  command = "CI=false npm install --prefix client && npm run build --prefix client"  # or your build command
   publish = "client/build"  # or your build output directory
+  environment = [
+    "NODE_ENV",
+    "PORT",
+    "REVIEW_ID",
+    "TWILIO_ACCOUNT_SID",
+    "TWILIO_AUTH_TOKEN"
+  ]
 
 [context.production.environment]
+  NODE_ENV = "production"
   CI = "false"

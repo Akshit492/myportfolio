@@ -46,10 +46,10 @@ export default function Resume(props) {
 
     const resumeBullets = [
        {label: "Education", logoSrc:"education.svg"},
-       {label: "Online Certifications", logoSrc:"work-history.svg"},
+       {label: "Work Experience", logoSrc:"work-history.svg"},
        {label: "Programming Skills", logoSrc:"programming-skills.svg"},
        {label: "Projects", logoSrc:"projects.svg"},
-       {label: "Interests", logoSrc:"interests.svg"},
+       {label: "Technical Skills", logoSrc:"interests.svg"},
        
 
       ];
@@ -61,11 +61,20 @@ export default function Resume(props) {
         {skill:"HTML" , ratingPercentage: 75 },
         {skill:"CSS" , ratingPercentage: 70 },
         {skill:"JavaScript" , ratingPercentage: 70 },
-        {skill:"React Js" , ratingPercentage: 60 },
+        {skill:"React Js" , ratingPercentage: 80 },
         {skill:"PHP" , ratingPercentage: 60 },
       ];
 
-
+      const TechnicalSkillDetails=[
+        {skill:"Jenkins" , ratingPercentage: 75 },
+        {skill:"Docker" , ratingPercentage: 75 },
+        {skill:"Kubernetes" , ratingPercentage: 60 },
+        {skill:"ROBOT(Python)" , ratingPercentage: 75 },
+        {skill:"ActiveMQ" , ratingPercentage: 70 },
+        {skill:"Automation Scripting" , ratingPercentage: 70 },
+        {skill:"PGSQL" , ratingPercentage: 80 },
+        {skill:"CI/CD" , ratingPercentage: 60 },
+      ];
 
 const projectDetails=[
     {
@@ -113,32 +122,24 @@ const resumeDetails=[
          <div className='resume-screen-container' key="work-experience">
              <div className='experience-container'>
              <ResumeHeading
-        heading={"Machine-Learning"}
-        subHeading={"Offered By: Stanford University "}
-        fromDate={"2021"}
-        toDate={"2022"}
+        heading={"R&D Intern"}
+        subHeading={"Nokia Solution and Networks Limited"}
+        fromDate={"July 2023"}
+        toDate={"August 2024"}
         />
         <div className='experience-description'>
             <span className='resume-description-text'>
-                A course in Machine learning 
+                Contributed as a part of DevOps team at Nokia 
                 </span>
             </div>
 
               <div className='experience-description'>
                   <span className='resume-description-text'>
-                  Machine learning is the science of getting computers to act without being explicitly programmed.This course provided me a broad introduction to machine learning, datamining, and statistical pattern recognition. 
+                  I developed a software solution to facilitate Selective Functional Testing within NCC utilizing ML. I was also immersed in a new project focused on integrating Generative AI into NCC through LLM
+and training procedures. Concurrently, I continued to identify manual tasks and deploy automation processes to optimize efficiency, reduce human effort, and minimize manual
+intervention
                       </span>
                       <br/>
-                      <a className='Links' href='https://www.coursera.org/learn/machine-learning' target="_blank">
-                      <button className='resume-btn-course' >
-                          Course Link
-                          </button>
-                          </a>
-                          <a className='Links' href='https://coursera.org/share/40c6b6a580b3b5c88ae8fae39a5de0a2' target="_blank">
-                          <button className='resume-btn-certificate'>
-                              Certificate Link
-                              </button>
-                              </a>
                               </div>
                               </div>
                   </div>,
@@ -172,21 +173,38 @@ const resumeDetails=[
                         ))}
                         </div>,
 
-                        <div className='resume-screen-container' key='interests'>
-                            <ResumeHeading
-                            heading='Gaming'
-                            description='Gaming is my passion. It makes me feel great when I play with my friends. '
-                            />
-                            <ResumeHeading
-                            heading='Music'
-                            description='Music is the real stress reliever of my life. Whenever I feel exhausted Music charges me up with energy'
-                            />
-                            <ResumeHeading
-                            heading='Writing'
-                            description='“Writing is the only thing that when I do it, I don’t feel I should be doing something else.” —Gloria Steinem.I really love to write about different possibilities in this Universe'
-                            />
+                        // <div className='resume-screen-container' key='interests'>
+                        //     <ResumeHeading
+                        //     heading='Gaming'
+                        //     description='Gaming is my passion. It makes me feel great when I play with my friends. '
+                        //     />
+                        //     <ResumeHeading
+                        //     heading='Music'
+                        //     description='Music is the real stress reliever of my life. Whenever I feel exhausted Music charges me up with energy'
+                        //     />
+                        //     <ResumeHeading
+                        //     heading='Writing'
+                        //     description='“Writing is the only thing that when I do it, I don’t feel I should be doing something else.” —Gloria Steinem.I really love to write about different possibilities in this Universe'
+                        //     />
 
+                        //     </div>,
+
+                        <div className='resume-screen-container programming-skills-container'
+                        key="programming-skills"
+                        >
+                            {TechnicalSkillDetails.map((skill,index)=>(
+                                <div className='skill-parent' key={index}>
+                                     <div className='heading-bullet'></div>
+                                     <span>{skill.skill}</span>
+                                     <div className='skill-percentage'>
+                                         <div style={{width:skill.ratingPercentage + "%"}}
+                                            className='active-percentage-bar'>
+                                             </div>
+                                    </div>
+                                    </div>
+                            ))}
                             </div>,
+
              
 
 ];
