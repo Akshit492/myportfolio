@@ -4,7 +4,7 @@ const router = express.Router();
 const twilio = require('twilio');
 require('dotenv').config();
 
-const twilioClient = twilio("", process.env.TWILIO_AUTH_TOKEN);
+const twilioClient = twilio(process.env.TWILIO_USER, process.env.TWILIO_AUTH_TOKEN);
 
 router.post('/contact', async (req, res) => {
   let data = req.body;
