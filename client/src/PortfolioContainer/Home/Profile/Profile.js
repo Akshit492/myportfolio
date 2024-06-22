@@ -12,7 +12,7 @@ export default function Profile() {
             <a href="https://sites.google.com/view/akshitsingla/home"target='_blank'>
               <i className="fa fa-google"></i>
             </a>
-            <a href="https://www.linkedin.com/in/akshit-singla-codinghero/"target='_blank'>
+            <a href="https://www.linkedin.com/in/akshit-singla492/"target='_blank'>
                <i className="fa fa-linkedin-square"></i>
             </a>
             <a href="https://www.instagram.com/akshitk492/"target='_blank' >
@@ -63,7 +63,7 @@ export default function Profile() {
               >{""}
               Contact Me{" "}
             </button>
-             <a href="https://drive.google.com/file/d/1LjbUyCmgWJpeqj3UViCrg3_kUUzkrsRe/view?usp=sharing" target='_blank' >
+             <a href='AkshitResume.pdf' download='AkshitResume.pdf' >
               <button className='btn highlighted-btn'>Get Resume</button>
             </a>
           </div>
@@ -77,3 +77,4 @@ export default function Profile() {
     </div>
   );
 }
+

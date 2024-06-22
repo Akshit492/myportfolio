@@ -57,7 +57,7 @@ const submitForm=async(e)=>{
     setMessage("")
   }
   } catch (error) {
-    console.log(error) 
+    //console.log("error here" , error) 
   } 
 };
   return (
@@ -76,7 +76,7 @@ const submitForm=async(e)=>{
             <i className="fa fa-google"></i>
           </a>
           <a
-            href="https://www.linkedin.com/in/akshit-singla-codinghero/"
+            href="https://www.linkedin.com/in/akshit-singla492/"
             target="_blank"
           >
             <i className="fa fa-linkedin-square"></i>
