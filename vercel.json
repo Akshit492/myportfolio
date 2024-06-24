@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/contact", "dest": "myportfolio/route/contactRoute.js" },
+      { "src": "/(.*)", "dest": "myportfolio/client/build/index.html" }
+    ]
+  }
+  
